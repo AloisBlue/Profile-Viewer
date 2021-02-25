@@ -1,1 +1,1 @@
-# React Code Style Guide
+Style guide
