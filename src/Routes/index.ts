@@ -1,1 +1,6 @@
-// has the endpoints
+const Index: any = {
+    layout: {
+        landing: '/'
+    }
+}
+export default Index;
