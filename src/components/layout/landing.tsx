@@ -1,7 +1,11 @@
 import React from "react";
+import { useHistory } from "react-router";
+import Index from "../../Routes/index";
 import "./layout.scss";
 
 const Landing = () => {
+    const history = useHistory();
+
     return(
         <div className="landing">
             <div className="wrapped">
@@ -12,6 +16,7 @@ const Landing = () => {
                         <div className="buttons">
                             <button
                                 id="one"
+                                onClick={() => history.push(Index.profile.allprofiles)}
                             >
                                 View
                             </button>
