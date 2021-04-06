@@ -4,6 +4,6 @@ export interface User {
     occupation: String;
     email: String;
     bio: String;
-    created_at?: String;
-    updated_at?: String;
+    created_at: String;
+    updated_at: String;
 }

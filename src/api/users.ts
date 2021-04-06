@@ -1,18 +1,21 @@
 import axios from "axios";
+import { Details } from "../components/profiles/allProfiles";
+
 
 const users = {
-    getUsers: () =>
-    axios
-      .get("/users")
-      .then(res => res.data),
-  getSingleUser: (id: string) =>
-    axios
-      .get(`/users/${id}`)
-      .then(res => res.data),
-  updateUser: (user: any, id: string) =>
-    axios
-      .patch(`/users/${id}`, { user })
-      .then(res => res.data)
+  getUsers: async () => {
+    let res = await axios.get("/users");
+    return res.data;
+  },
+  getSingleUser: async (id: string) => {
+    let res = await axios.get(`/users/${id}`);
+    return res.data;
+  },
+  updateUser: async (user: Details, id: string) => {
+    delete user.id;
+    let res = await axios.patch(`/users/${id}`, { user })
+    return res.data;
+  }
 }
 
 export default users;

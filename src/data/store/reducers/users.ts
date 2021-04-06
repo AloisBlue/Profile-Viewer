@@ -1,17 +1,15 @@
 import { GET_ALL_USERS, USERS_LOADING, GETS_SINGLE_USER } from "../types";
+import { userReducerType } from "./reducerTypes";
+import { userActionsTypes } from "../actions/actionTypes";
 
-interface Action {
-    type: any;
-    payload: Array<string> | object
-}
 
-const initial = {
+const initial: userReducerType = {
   allUsers: null,
   singleUser: null,
   loading: false
 }
 
-const users = (state = initial, action: Action) => {
+const users = (state = initial, action: userActionsTypes): userReducerType => {
   switch (action.type) {
     case USERS_LOADING:
       return {

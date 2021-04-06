@@ -1,7 +1,9 @@
 import React from "react";
 import { useHistory } from "react-router";
 import Index from "../../Routes/index";
-import "./layout.scss";
+
+import "../../styles/layout.scss";
+
 
 const Landing = () => {
     const history = useHistory();
