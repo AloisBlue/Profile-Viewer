@@ -37,7 +37,7 @@ const Landing = () => {
                     </div>
                 </div>
                 <div className="right">
-                    <p style={{color: 'white'}}>Any text goes here</p>
+                    <p style={{color: 'white'}}>Connect with People</p>
                 </div>
             </div>
         </div>
